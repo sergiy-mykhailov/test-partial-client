@@ -1,0 +1,46 @@
+.WorkfileEdit {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.WorkfileMenuButton {
+  flex: 1;
+  width: 20%;
+  text-align: right;
+  padding: 5px;
+  font-size: 20px;
+  color: $black-70;
+  cursor: pointer;
+}
+
+.WorkfileMenu {
+  border: thin solid $black-20;
+  position: absolute;
+  right: 13px;
+  top: -18px;
+  background: white;
+  display: none;
+}
+
+.WorkfileMenuOpen {
+  display: block;
+}
+
+.WorkfileMenuItem {
+  cursor: pointer;
+  padding: 5px 15px;
+  background-color: white;
+  &:hover {
+    background-color: $offer-white;
+  }
+}
+
+.WorkfileMenuModal {
+  width: 600px;
+}
+
+.WorkfileMenuItemGroup {
+  display: block;
+  width: 500px;
+}

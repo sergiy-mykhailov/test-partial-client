@@ -1,0 +1,99 @@
+@import 'shadow';
+@import 'colors';
+@import 'type';
+
+.Report {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.ReportHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    @extend page-title;
+    text-align: left;
+  }
+}
+
+.Reports {
+  display: flex;
+  /* flex: 1; */
+  flex-direction: column;
+}
+
+.PageHeader {
+  text-align: center;
+}
+
+.ReportPage {
+  display: flex;
+  box-shadow: $standard-shadow;
+  margin: 1rem 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.PagePicker {
+  display: flex;
+  align-items: center;
+
+  .PagePickerText {
+    margin: 0 1rem;
+  }
+}
+
+.SalesComparison {
+  border-collapse: collapse;
+  font-size: 0.825rem;
+  width: 100%;
+
+  th {
+    padding: 0.5rem 0;
+    font-weight: bold;
+  }
+
+  td {
+    /* text-align: center; */
+    padding: 0.5rem 0.5rem;
+  }
+
+  .LabelColumn {
+    text-align: center;
+    padding: 0.5rem 0.5rem;
+    background: $softest-green;
+  }
+}
+
+.TableSection {
+  width: 100%;
+  display: flex;
+}
+
+/* .SideLabel {
+  background: blue;
+  color: $white;
+  display: flex;
+  align-items: center;
+  width: 2rem;
+
+  span {
+    transform: rotate(270deg) translate(0, -91%);
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+} */
+
+.TableContainer {
+  flex: 1;
+}
+
+.SubHeader {
+  padding: 0 0;
+  text-align: center;
+  background: $black-08;
+}

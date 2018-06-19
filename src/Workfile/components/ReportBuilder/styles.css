@@ -1,0 +1,302 @@
+@import 'shadow';
+@import 'colors';
+@import 'type';
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+  pointer-events: none
+}
+
+.ReportBuilder {
+  width: 100%;
+  position: relative;
+}
+
+.ReportBuilder * {
+  box-sizing: border-box;
+}
+
+.ReportBuilder {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+  }
+}
+
+.pages {
+  overflow: scroll;
+  height: calc(100vh - 8.4em);
+  margin: 1em 0 0 0;
+  width: calc(100% - 14.7em);
+  box-shadow: inset 0px 1px 8px 1px RGBA(0,0,0,0.3);
+  background-color: #fafafa;
+}
+
+.column {
+  border: 1px solid RGBA(0,0,0,.1);
+  position: absolute;
+}
+
+.page{
+  margin: 1em auto;
+  position: relative;
+  box-shadow: 0px 1px 1px 1px RGBA(0,0,0,.3);
+  padding: 3em 3em;
+  height: 66em;
+  width: 51em;
+  overflow: hidden;
+  background-color: #fff;
+  line-height: 1.8;
+  *:first-child {
+    margin-top: 0;
+  }
+}
+
+.page img{
+  max-width: 100%;
+}
+
+
+.ImageLibrary {
+  width: 200px;
+  position: fixed;
+  top: 15em;
+  right: 1em;
+}
+
+.TableLibrary table {
+  zoom: .5;
+  margin-bottom: 1em;
+}
+
+
+
+.TableLibrary {
+  width: 200px;
+  position: fixed;
+  top: 5em;
+  right: 1em;
+}
+
+
+.contentBox {
+  position: absolute;
+  background-color: #fff;
+}
+
+.contentBox.selected {
+  cursor: move;
+  border: 1px dotted green;
+}
+
+.contentBox.selected .resizeHandle{
+  display: block;
+}
+
+.contentBox .resizeHandle {
+  position: absolute;
+  display: none;
+  content: "";
+  height: 6em;
+  width: .2em;
+  background-color: green;
+  top: 50%;
+  margin-top: -3em;
+  border-radius: 4px;
+  z-index: 2;
+  cursor: col-resize;
+}
+
+figure {
+  padding: 1em;
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  margin: 0 1em 0 0;
+}
+
+figure.left {margin:0 1em 1em 0; float: left;}
+figure.right {margin:0 0 1em 1em; float: right;}
+figure.center {margin:0 auto 1em auto;}
+
+table.left {margin:0 1em 1em 0; float: left;}
+table.right {margin:0 0 1em 1em; float: right;}
+table.center {margin:0 auto 1em auto;}
+
+  table {
+    text-align: center;
+    width: auto;
+    background-color: #fafafa;
+    border-collapse: collapse;
+    border-top: 1px solid #666;
+    border-left: 1px solid #666;
+  }
+
+  table td {
+    padding: .25em;
+    border-right: 1px solid #666;
+  }
+
+  table tbody tr {
+    border-bottom: 1px solid #666;
+  }
+  table tbody tr:nth-child(2n-1) {
+    background-color: #f1f1f1;
+  }
+
+  .buttonGroup{
+    margin-right:1em;
+    float: left;
+    width: auto;
+    content: "";
+    display: table;
+    input {
+      border-radius: 4px;
+      margin: 0 .5em 0 0;
+      padding: .5em;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: .5em;
+      height: 6em;
+      width: 6em;
+      float:left;
+      box-shadow: none;
+      border: none;
+      border-radius: 0;
+      border-radius: 4px;
+      margin: 0 .5em 0 0;
+      border: 1px solid #ccc;
+      &.selected {
+        background-color: #ddd;
+      }
+      /* &:first-child {
+        border-radius: 1em 0 0 1em;
+      }*/
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+
+.ContextSidebar {
+  position: absolute;
+  right: 0;
+  top: 4.8em;
+  background-color: #fff;
+  padding: .8em;
+  width: 14.7em;
+  .section {
+    margin-bottom: 1em;
+    clear: both;
+  }
+  .buttonGroup {
+    width: 100%;
+    margin-bottom: .5em;
+    select {
+      width: 100%;
+      height: 2em;
+    }
+  }
+  h5 {
+    margin: .25em 0 .25em 0;
+  }
+}
+
+.toolbar {
+  width: 100%;
+  background-color: #fff;
+
+}
+
+.toolbar > button{
+  width: 100%
+}
+
+.modal.show {
+  display: block
+}
+
+.modal {
+  z-index: 30;
+  display: none;
+  background-color:RGBA(255,255,255,.5);
+  height:100vh;
+  width:100vw;
+  position: fixed;
+  left:0;
+  top:0;
+}
+.modalContent{
+  position: absolute;
+  background-color: #fff;
+  padding: 2em;
+  width: 80%;
+  height: 80%;
+  top:10%;
+  left:10%;
+  box-shadow: 0px 1px 1px 1px RGBA(0,0,0,.3);
+  overflow: scroll;
+}
+
+.mediaLibrary{
+  width: 80vw;
+    height: 62vh;
+    overflow: scroll;
+}
+
+.mediaLibrary button {
+    width: 20%;
+    padding: 0;
+    margin: 1em;
+}
+
+.mediaLibrary button img{
+  width: 100%;
+  display: block;
+}
+
+.mediaLibrary button img, .mediaLibrary button object{
+  pointer-events: none;
+}
+
+.tabMenu {
+  float: left;
+  width: 20%;
+  height: 62vh;
+  padding: 0;
+  margin: 0;
+  background: #eee;
+}
+
+.tabMenu li {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+.tabMenu li button {
+  width: 100%;
+  height: 4em;
+  margin: 0;
+  background: #eee;
+  border: none;
+}
+
+.tabMenu li button.selected {
+  background-color: #ccc;
+}
+
+.imageList button.selected {
+  border: 3px solid green;
+}
+
+:global(.clearfix) {
+  content: "";
+  display: table;
+  clear: both;
+}

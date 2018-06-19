@@ -1,0 +1,36 @@
+.ImprovementFormSection {
+  display: flex;
+  margin: 0.5rem 0;
+  flex-wrap: wrap;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  border: 1px solid $gray;
+  padding: 0 15px;
+}
+
+.ImprovementFormSubmit {
+  margin: 10px;
+}
+
+.InputContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  width: 50%;
+
+  &:nth-child(odd) {
+    padding-left: 0;
+  }
+
+  &:nth-child(even) {
+    padding-right: 0;
+  }
+}

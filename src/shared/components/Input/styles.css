@@ -1,0 +1,19 @@
+@import 'colors';
+@import 'shadow';
+
+.Input {
+  border-radius: 3px;
+  background: $white;
+  padding: 0.5rem;
+  border: 0.5px solid $black-08;
+  box-shadow: $standard-shadow;
+  font-size: 12px;
+
+  transition: all 0.1s ease-in-out;
+
+  &:focus {
+    border: 0.5px solid $soft-green;
+    outline: none;
+    box-shadow: 0 1px 2px 0 rgba(82, 149, 84, 0.34);
+  }
+}

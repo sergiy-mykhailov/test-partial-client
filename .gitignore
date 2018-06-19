@@ -1,0 +1,9 @@
+.cache-loader
+node_modules
+dist
+coverage
+.env
+.DS_Store
+/__e2eTests__/errorShots/*.png
+*png
+.prettierignore

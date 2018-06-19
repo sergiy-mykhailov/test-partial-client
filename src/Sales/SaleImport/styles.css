@@ -1,0 +1,22 @@
+.ImportMessage {
+  padding: 20px;
+}
+
+.SaleImportLoadingIndicator {
+  margin-left: 90px;
+  margin-bottom: 10px;
+}
+
+.SaleImportButton {
+  margin-bottom: 0.5em;
+}
+
+.ErrorIcon {
+  color: red;
+  padding-right: 8px;
+}
+
+.SuccessIcon {
+  color: green;
+  padding-right: 8px;
+}

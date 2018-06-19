@@ -1,0 +1,66 @@
+@import 'colors';
+@import 'type';
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+  pointer-events: none
+}
+
+.ReportBuilder {width: 100%}
+
+.ReportBuilder * {
+  box-sizing: border-box;
+}
+
+.page{
+  background-color: #fff;
+  margin: 1em auto;
+  position: relative;
+  border: 1px solid #ccc;
+  padding: .5em 1em;
+  height: 66em;
+  width: 51em;
+  overflow: hidden;
+}
+
+@media print {
+  .page{
+    page-break-after: auto;
+    page-break-inside: avoid;
+    height: 98%;
+    width: 100%;
+    border: none;
+    margin: 0
+  }
+  :global(#WorkfileMain){
+      box-shadow: none;
+      overflow-y: initial;
+      padding: 0;
+  }
+}
+
+.page img{
+  max-width: 100%;
+}
+
+  table {
+    text-align: center;
+    width: auto;
+    border-collapse: collapse;
+    border-top: 1px solid #666;
+    border-left: 1px solid #666;
+  }
+
+  table td {
+    padding: .25em;
+    border-right: 1px solid #666;
+  }
+
+  table tbody tr {
+    border-bottom: 1px solid #666;
+  }

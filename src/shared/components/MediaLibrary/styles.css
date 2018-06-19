@@ -1,0 +1,50 @@
+.mediaLibrary{
+    height: 62vh;
+    width: 80vw;
+    overflow: scroll;
+}
+
+.mediaLibrary button {
+    padding: 0;
+    margin: 1em;
+}
+
+.mediaLibrary button img{
+  width: 100%;
+  display: block;
+}
+
+.mediaLibrary button img, .mediaLibrary button object{
+  pointer-events: none;
+}
+
+.tabMenu {
+  float: left;
+  width: 20%;
+  height: 62vh;
+  padding: 0;
+  margin: 0;
+  background: #eee;
+}
+
+.tabMenu li {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+.tabMenu li button {
+  width: 100%;
+  height: 4em;
+  margin: 0;
+  background: #eee;
+  border: none;
+}
+
+.tabMenu li button.selected {
+  background-color: #ccc;
+}
+
+.imageList button.selected {
+  border: 3px solid green;
+}

@@ -1,0 +1,26 @@
+html,
+body {
+  height: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  margin: 0;
+}
+
+:global {
+  #app {
+    min-height: 100%;
+    display: flex;
+  }
+
+  #app > div {
+    flex: 1;
+    display: flex;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,10 @@
+@import 'colors';
+
+.Sidebar {
+  z-index: 1;
+  background: $offer-white;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  padding: 1em 0;
+}

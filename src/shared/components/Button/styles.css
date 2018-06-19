@@ -1,0 +1,108 @@
+@import 'colors';
+
+@define-extend button {
+  border-radius: 3px;
+  /* padding: 0.5rem 1.25rem; */
+  padding: 0.5rem 1rem;
+  font-size: 12px;
+  font-weight: 600;
+  /* transition: box-shadow 0.1s ease-in-out, opacity 0.1s ease-in-out; */
+  transition: all 0.1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.Button svg {
+  height: 15px;
+  margin-right: 0.125rem;
+}
+
+.ButtonPrimary {
+  @extend button;
+
+  background: $soft-green;
+  color: $white;
+  box-shadow: 0 1px 2px 0 $black-30;
+  border: none;
+  /* transition: box-shadow 0.1s ease-in-out; */
+
+  &:hover {
+    box-shadow: 0 0px 0px 0 $black-30;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.ButtonDanger {
+  @extend button;
+
+  background: $soft-red;
+  color: $white;
+  box-shadow: 0 1px 2px 0 $black-30;
+  border: none;
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.ButtonSecondary {
+  @extend button;
+
+  background: $white;
+  color: $soft-green;
+  border: 1px solid $soft-green;
+  box-shadow: 0 2px 2px 0 rgba(82, 149, 84, 0.34);
+  /* transition: box-shadow 0.1s ease-in-out; */
+
+  &:hover {
+    box-shadow: 0 0px 0px 0 rgba(82, 149, 84, 0.34);
+  }
+
+  &:active {
+    color: #3fa643;
+    border: 1px solid #3fa643;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.ButtonDefault {
+  @extend button;
+  background: $white;
+
+  color: $black-70;
+  border: 1px solid $black-20;
+  box-shadow: 0 2px 2px 0 $black-30;
+
+  &:hover {
+    box-shadow: 0 0px 0px 0 $black-30;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.ButtonLight {
+  @extend button;
+
+  color: $gray;
+  border: none;
+  box-shadow: none;
+  background: $white;
+
+  &:hover {
+    background: $black-08;
+    color: $black-20;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}

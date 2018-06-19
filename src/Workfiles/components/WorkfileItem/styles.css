@@ -1,0 +1,58 @@
+@import 'colors';
+@import 'type';
+
+.WorkfileItem {
+  background: $white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $off-white;
+  align-items: center;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  transition: background-color 0.1s ease-in-out;
+
+  &:hover {
+    background: rgba(93, 193, 96, 0.1);
+  }
+}
+
+.WorkfileMain {
+  display: flex;
+  flex: 1;
+}
+
+.WorkfileItemName {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: $black-70;
+
+  padding: 0 0.25rem;
+  flex: 1;
+}
+
+.WorkfileItemPreparedFor {
+  flex: 1;
+}
+
+.WorkfileItemDateCreated {
+  flex: 1;
+}
+
+.WorkfileButtonDiv {
+  flex: 1;
+}
+
+.WorkfileItemSectionHeader {
+  @extend label;
+  margin-bottom: 2px;
+}
+
+.WorkfileItemSectionText {
+  @extend subheading;
+  margin-top: 2px;
+}

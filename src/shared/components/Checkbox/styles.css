@@ -1,0 +1,48 @@
+@import 'colors';
+
+.Checkbox {
+  display: flex;
+
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+.CheckboxBox {
+  width: 13px;
+  height: 13px;
+  display: flex;
+  padding: 2px;
+
+  border: solid 1px $black-20;
+  border-radius: 3px;
+}
+
+.CheckboxFill {
+  background: $soft-green;
+  border-radius: 3px;
+  flex: 1;
+}
+
+/* .CheckboxFillChecked {
+  background: $soft-green;
+  border-radius: 3px;
+  flex: 1;
+} */
+
+.CheckboxLabel {
+  color: $black-70;
+  text-transform: none;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.Disabled .CheckboxBox {
+  background: $black-20;
+}
+
+.Disabled .CheckboxLabel {
+  color: $black-20;
+}

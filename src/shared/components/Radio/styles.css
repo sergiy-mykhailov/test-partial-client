@@ -1,0 +1,40 @@
+@import 'colors';
+
+.Radio {
+  display: flex;
+
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+.RadioBox {
+  width: 13px;
+  height: 13px;
+  display: flex;
+  padding: 2px;
+
+  border: solid 1px $black-20;
+  border-radius: 9px;
+}
+
+.RadioFill {
+  background: $soft-green;
+  border-radius: 6px;
+  flex: 1;
+}
+
+/* .RadioFillChecked {
+  background: $soft-green;
+  border-radius: 3px;
+  flex: 1;
+} */
+
+.RadioLabel {
+  color: $black-70;
+  text-transform: none;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
