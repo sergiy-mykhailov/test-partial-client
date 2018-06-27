@@ -35,6 +35,18 @@ export interface Item {
   deleted?: boolean;
 }
 
+export interface EditorOpen {
+  (img: string): void;
+}
+
+export interface EditorClose {
+  (): void;
+}
+
+export interface EditorInsert {
+  (img: string): void;
+}
+
 export interface CloseFunction {
   (): void;
 }

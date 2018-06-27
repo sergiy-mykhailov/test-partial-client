@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as styles from './styles.css';
-import { CloseFunction } from '../../../types/Report';
+import { CloseFunction, EditorOpen } from '../../../types/Report';
 import { File as IFile } from '../../../types';
 import TractService from '../../../services/tracts';
 import SaleService from '../../../services/sales';
@@ -12,6 +12,7 @@ import { ComponentTab } from '../ComponentTab';
 export interface ImageLibraryProps {
   closeModal: CloseFunction;
   workfileId: string;
+  onImageInsert: EditorOpen;
 }
 
 export interface ImageLibraryState {
@@ -85,11 +86,7 @@ export class ImageLibrary extends React.Component<ImageLibraryProps, ImageLibrar
 
   insertImage() {
     if (this.state.selectedFile !== null) {
-      document.execCommand(
-        'insertHTML',
-        false,
-        "<figure width='100%'><img src='" + this.state.selectedFile.file_url + "'/></figure>"
-      );
+      this.props.onImageInsert(this.state.selectedFile.file_url);
       this.setState({ selectedFile: null });
       this.props.closeModal();
     }

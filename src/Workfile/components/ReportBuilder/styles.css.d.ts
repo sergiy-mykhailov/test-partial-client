@@ -21,3 +21,5 @@ export const modalContent: string;
 export const mediaLibrary: string;
 export const tabMenu: string;
 export const imageList: string;
+export const imgControlWrapper: string;
+export const editorControlsWrapper: string;

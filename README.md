@@ -17,6 +17,7 @@ If you do not have yarn installed, follow [these instructions](https://yarnpkg.c
 
 #### Start Development:
 ```
+npm run start-proxy
 yarn dev
 ```
 
@@ -28,3 +29,8 @@ For unit test, enter the command `yarn test` to run the test suite. This project
 You can also run `yarn test:watch` to run the test suite in watch mode. Jest's watch mode is very nice and allows you to do things like only run tests for changed files, all tests, and filter tests by test name and file name.
 
 For the end to end tests, enter the command `yarn run e2e` to run the test suite.
+
+#### Comments to the test task:
+
+* I used cors-proxy, because Amazon does not have the correct CORS settings for development. So you need to run cors-proxy before running `yarn dev`.
+* The project uses some architectural features such as `document.execCommand()`, I think using it and working with plain html is a not good idea. So I need more time to finish task 'A'.

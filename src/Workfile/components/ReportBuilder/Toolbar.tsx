@@ -5,6 +5,7 @@ import { ImageLibrary } from '../../../shared/components/MediaLibrary';
 import { TableBuilder } from './TableBuilder';
 import { Button } from '../../../shared/components/Button';
 import { Modal } from '../../../shared/components/Modal';
+import { ImageEditor } from './ImageEditor';
 
 export interface ToolbarProps {
   saveReport: any;
@@ -16,13 +17,18 @@ export interface ToolbarState {
   showImageModal: boolean;
   showTableModal: boolean;
   activeElement: any;
+  showEditorModal: boolean;
+  editableImg: string;
 }
 
 export class Toolbar extends React.Component<ToolbarProps, ToolbarState> {
+  editor = null;
   state: ToolbarState = {
     showImageModal: false,
     showTableModal: false,
-    activeElement: null
+    activeElement: null,
+    showEditorModal: false,
+    editableImg: null
   };
 
   constructor(props: ToolbarProps) {
@@ -54,7 +60,26 @@ export class Toolbar extends React.Component<ToolbarProps, ToolbarState> {
     });
   }
 
+  openEditorModal = (img) => {
+    this.setState({ showEditorModal: true, editableImg: img });
+  };
+
+  closeEditorModal = () => {
+    this.setState({ showEditorModal: false, editableImg: null });
+  };
+
+  insertEditedImage = (img) => {
+    document.execCommand(
+      'insertHTML',
+      false,
+      "<figure width='100%'><img src='" + img + "'/></figure>"
+    );
+
+    this.setState({ showEditorModal: false, editableImg: null });
+  };
+
   render() {
+    const img = (this.state.editableImg !== null) ? this.state.editableImg : '';
     return (
       <div className={styles.toolbar + ' clearfix'}>
         <Modal
@@ -63,7 +88,14 @@ export class Toolbar extends React.Component<ToolbarProps, ToolbarState> {
           showOk={false}
           onCancel={this.closeModal}
         >
-          <ImageLibrary closeModal={this.closeModal} workfileId={this.props.workfileId} />
+          <ImageLibrary closeModal={this.closeModal} workfileId={this.props.workfileId} onImageInsert={this.openEditorModal} />
+        </Modal>
+
+        <Modal
+          show={this.state.showEditorModal}
+          showOk={false}
+        >
+          <ImageEditor image={img} onImageInsert={this.insertEditedImage} onCancel={this.closeEditorModal} />
         </Modal>
 
         <TableBuilder

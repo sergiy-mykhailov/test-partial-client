@@ -300,3 +300,19 @@ table.center {margin:0 auto 1em auto;}
   display: table;
   clear: both;
 }
+
+.imgControlWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.imgControlWrapper label{
+  margin-right: 8px;
+}
+
+.editorControlsWrapper {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

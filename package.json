@@ -42,7 +42,9 @@
     "test:watch": "jest --watch",
     "e2e": "./node_modules/.bin/wdio wdio.conf.js",
     "format": "prettier --write '**/*.{js,jsx,tsx,ts}'",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "start-proxy": "pm2 start corsProxy.js --name cors-proxy",
+    "stop-proxy": "pm2 stop cors-proxy"
   },
   "dependencies": {
     "@turf/area": "^6.0.1",
@@ -72,6 +74,7 @@
     "classnames": "^2.2.5",
     "clean-webpack-plugin": "^0.1.16",
     "compression-webpack-plugin": "^1.0.1",
+    "cors-anywhere": "^0.4.1",
     "css-loader": "^0.28.7",
     "date-fns": "^1.28.5",
     "dom-to-image": "^2.6.0",
@@ -95,6 +98,7 @@
     "postcss-loader": "^2.0.6",
     "precss": "^2.0.0",
     "react": "^16.0.0",
+    "react-avatar-editor": "^11.0.4",
     "react-contenteditable": "^2.0.5",
     "react-dom": "^16.0.0",
     "react-draggable": "^3.0.4",

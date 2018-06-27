@@ -6,3 +6,4 @@ coverage
 /__e2eTests__/errorShots/*.png
 *png
 .prettierignore
+.idea/
