@@ -79,7 +79,8 @@ export class Toolbar extends React.Component<ToolbarProps, ToolbarState> {
   };
 
   render() {
-    const img = (this.state.editableImg !== null) ? this.state.editableImg : '';
+    const img = this.state.editableImg || '';
+
     return (
       <div className={styles.toolbar + ' clearfix'}>
         <Modal

@@ -30,11 +30,6 @@ export class ImageEditor extends React.Component<ImageEditorProps, ImageEditorSt
     scale: 1,
   };
 
-  constructor(props: ImageEditorProps) {
-    super(props);
-    this.props = props;
-  }
-
   handleLoadSuccess = (imgInfo) => {
     this.setState({ imgHeight: imgInfo.height, imgWidth: imgInfo.width });
   };
