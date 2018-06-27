@@ -93,6 +93,7 @@
     "lodash.eq": "^4.0.0",
     "lodash.uniq": "^4.5.0",
     "lost": "^8.2.0",
+    "pm2": "^2.10.4",
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.6",
